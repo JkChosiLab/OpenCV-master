@@ -1,0 +1,21 @@
+﻿<Window x:Class="OpenCVPlayground.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OpenCVPlayground"
+        mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"      
+        Title="Main" Height="1080" Width="1920" WindowState="Maximized" Icon="/OpenCVPlayground;component/opencv-logo.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1301*"/>
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Background="black">
+            <ContentControl prism:RegionManager.RegionName="MenuRegion" DockPanel.Dock="Top"/>
+            <ContentControl prism:RegionManager.RegionName="ImageRegion" DockPanel.Dock="Left"/>
+        </DockPanel>
+        <ContentControl prism:RegionManager.RegionName="ActionsRegion" Grid.Column="1"/>
+    </Grid>
+</Window>
